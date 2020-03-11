@@ -1,0 +1,56 @@
+-- based on many hitbox scripts for arsenal/cb:ro, i decided to make a better version of these scripts
+--actually I got a hitbox script and rewrote it so its medium size and hitbox is transparent.
+-- this is for the notification when injected, lol
+local function SendNotification(title,text,duration,...)
+  game.StarterGui:SetCore("SendNotification", {
+    Title = title;
+    Text = text;
+    Icon = "rbxassetid://3555015825";
+    Duration = duration;
+  })
+end
+game.StarterGui:SetCore("SendNotification",{
+    Title = "Hitbox Script Loaded";
+    Text = "you using hitbox script";
+    Icon = "rbxassetid://3555015825";
+    Duration = "2";
+})
+-- print and thing
+print("Wassup, this worked!")
+function getplrsname()
+for i,v in pairs(game:GetChildren()) do
+if v.ClassName == "Players" then
+return v.Name
+end
+end
+end
+-- epic enlarge hitbox
+--also makes hitboxes transparent woohoo
+local players = getplrsname()
+local plr = game[players].LocalPlayer
+coroutine.resume(coroutine.create(function()
+while  wait(1) do
+coroutine.resume(coroutine.create(function()
+for _,v in pairs(game[players]:GetPlayers()) do
+if v.Name ~= plr.Name and v.Character then
+-- lower torso size, collision, and transparency
+v.Character.LowerTorso.CanCollide = false
+v.Character.LowerTorso.Material = "Neon"
+v.Character.LowerTorso.Size = Vector3.new(20,20,20)
+v.Character.LowerTorso.Transparency = 1
+-- HumanoidRootPart size, collision, and transparency
+v.Character.HumanoidRootPart.Size = Vector3.new(20,20,20)
+v.Character.HumanoidRootPart.Transparency = 1
+v.Character.HumanoidRootPart.CanCollide = false
+end
+end
+end))
+end
+end))
+--[[
+if for some reason you dont want transparent hitboxes, remove the part that says
+"v.Character.(HumanoidRootPart or LowerTorso).Transparency = 1"
+to change the size look for anything that says
+"v.Character.HumanoidRootPart or LowerTorso.Size = Vector3.new(20,20,20)" and change the numbers.
+i personally reccomend leaving these settings alone, but do whatever you want this aint paid lol
+--]]
