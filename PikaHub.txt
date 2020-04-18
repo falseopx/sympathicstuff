@@ -1,0 +1,373 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances --
+
+local pikahub = Instance.new("ScreenGui")
+local hostframe = Instance.new("Frame")
+local home = Instance.new("Frame")
+local anotherpika = Instance.new("ImageLabel")
+local homedesc = Instance.new("TextLabel")
+local homelabel = Instance.new("TextLabel")
+local pikalabel = Instance.new("ImageLabel")
+local pikanamelabel = Instance.new("TextLabel")
+local scripts = Instance.new("Frame")
+local scriptslabel = Instance.new("TextLabel")
+local fluffyhub = Instance.new("TextButton")
+local fling = Instance.new("TextButton")
+local owlhub = Instance.new("TextButton")
+local reviz = Instance.new("TextButton")
+local games = Instance.new("Frame")
+local scriptslabel_2 = Instance.new("TextLabel")
+local arsenal = Instance.new("TextButton")
+local ninjalegends = Instance.new("TextButton")
+local cbro = Instance.new("TextButton")
+local homebtn = Instance.new("TextButton")
+local scriptsbtn = Instance.new("TextButton")
+local gamesbtn = Instance.new("TextButton")
+
+--Properties--
+
+pikahub.Name = "pikahub"
+pikahub.Parent = game.CoreGui
+
+hostframe.Name = "hostframe"
+hostframe.Parent = pikahub
+hostframe.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+hostframe.BorderColor3 = Color3.fromRGB(50, 50, 50)
+hostframe.BorderSizePixel = 5
+hostframe.Position = UDim2.new(0.197992697, 0, 0.149517685, 0)
+hostframe.Size = UDim2.new(0, 668, 0, 435)
+
+home.Name = "home"
+home.Parent = hostframe
+home.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+home.BorderColor3 = Color3.fromRGB(50, 50, 50)
+home.BorderSizePixel = 5
+home.Position = UDim2.new(0.0913173631, 0, 0.172280356, 0)
+home.Size = UDim2.new(0, 591, 0, 345)
+
+anotherpika.Name = "anotherpika"
+anotherpika.Parent = home
+anotherpika.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+anotherpika.BorderColor3 = Color3.fromRGB(50, 50, 50)
+anotherpika.BorderSizePixel = 5
+anotherpika.Position = UDim2.new(0.0572864451, 0, 0.145493746, 0)
+anotherpika.Size = UDim2.new(0, 229, 0, 244)
+anotherpika.Image = "http://www.roblox.com/asset/?id=4915071606"
+
+homedesc.Name = "homedesc"
+homedesc.Parent = home
+homedesc.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+homedesc.BorderColor3 = Color3.fromRGB(50, 50, 50)
+homedesc.BorderSizePixel = 5
+homedesc.Position = UDim2.new(0.481990397, 0, 0.144627661, 0)
+homedesc.Size = UDim2.new(0, 257, 0, 244)
+homedesc.Font = Enum.Font.GothamBlack
+homedesc.Text = "Pika! Welcome to Pika Hub! This Free Script Hub Only Has a short amount of scripts (I can't find any good ones lol) but they are good ones. Sadly, scripts like Owl Hub Only work on paid exploits."
+homedesc.TextColor3 = Color3.fromRGB(255, 255, 255)
+homedesc.TextSize = 20.000
+homedesc.TextWrapped = true
+
+homelabel.Name = "homelabel"
+homelabel.Parent = home
+homelabel.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+homelabel.BorderColor3 = Color3.fromRGB(50, 50, 50)
+homelabel.BorderSizePixel = 5
+homelabel.Position = UDim2.new(0.338166386, 0, -0.000299868378, 0)
+homelabel.Size = UDim2.new(0, 168, 0, 34)
+homelabel.Font = Enum.Font.GothamBlack
+homelabel.Text = "Pika Hub - Home"
+homelabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+homelabel.TextSize = 20.000
+homelabel.TextWrapped = true
+
+pikalabel.Name = "pikalabel"
+pikalabel.Parent = hostframe
+pikalabel.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+pikalabel.BorderColor3 = Color3.fromRGB(50, 50, 50)
+pikalabel.BorderSizePixel = 5
+pikalabel.Position = UDim2.new(0.0164670665, 0, 0.0274527706, 0)
+pikalabel.Size = UDim2.new(0, 50, 0, 49)
+pikalabel.Image = "http://www.roblox.com/asset/?id=4915071606"
+
+pikanamelabel.Name = "pikanamelabel"
+pikanamelabel.Parent = hostframe
+pikanamelabel.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+pikanamelabel.BorderColor3 = Color3.fromRGB(50, 50, 50)
+pikanamelabel.BorderSizePixel = 5
+pikanamelabel.Position = UDim2.new(0.131736532, 0, 0.0344827585, 0)
+pikanamelabel.Size = UDim2.new(0, 160, 0, 44)
+pikanamelabel.Font = Enum.Font.GothamBlack
+pikanamelabel.Text = "Pika Hub (Beta)"
+pikanamelabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+pikanamelabel.TextScaled = true
+pikanamelabel.TextSize = 14.000
+pikanamelabel.TextWrapped = true
+
+scripts.Name = "scripts"
+scripts.Parent = hostframe
+scripts.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+scripts.BorderColor3 = Color3.fromRGB(50, 50, 50)
+scripts.BorderSizePixel = 5
+scripts.Position = UDim2.new(0.0913173631, 0, 0.167682663, 0)
+scripts.Size = UDim2.new(0, 591, 0, 347)
+scripts.Visible = false
+
+scriptslabel.Name = "scriptslabel"
+scriptslabel.Parent = scripts
+scriptslabel.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+scriptslabel.BorderColor3 = Color3.fromRGB(50, 50, 50)
+scriptslabel.BorderSizePixel = 5
+scriptslabel.Position = UDim2.new(0.338409483, 0, -0.000299868378, 0)
+scriptslabel.Size = UDim2.new(0, 167, 0, 34)
+scriptslabel.Font = Enum.Font.GothamBlack
+scriptslabel.Text = "Pika Hub - Scripts"
+scriptslabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+scriptslabel.TextSize = 20.000
+scriptslabel.TextWrapped = true
+
+fluffyhub.Name = "fluffyhub"
+fluffyhub.Parent = scripts
+fluffyhub.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+fluffyhub.BorderColor3 = Color3.fromRGB(50, 50, 50)
+fluffyhub.BorderSizePixel = 5
+fluffyhub.Position = UDim2.new(0.0203045681, 0, 0.343774796, 0)
+fluffyhub.Size = UDim2.new(0, 131, 0, 50)
+fluffyhub.Font = Enum.Font.Gotham
+fluffyhub.Text = "FluffyHub"
+fluffyhub.TextColor3 = Color3.fromRGB(255, 255, 255)
+fluffyhub.TextSize = 20.000
+
+fling.Name = "fling"
+fling.Parent = scripts
+fling.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+fling.BorderColor3 = Color3.fromRGB(50, 50, 50)
+fling.BorderSizePixel = 5
+fling.Position = UDim2.new(0.265651464, 0, 0.343774796, 0)
+fling.Size = UDim2.new(0, 131, 0, 50)
+fling.Font = Enum.Font.Gotham
+fling.Text = "Kill/Fling Gui"
+fling.TextColor3 = Color3.fromRGB(255, 255, 255)
+fling.TextSize = 20.000
+
+owlhub.Name = "owlhub"
+owlhub.Parent = scripts
+owlhub.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+owlhub.BorderColor3 = Color3.fromRGB(50, 50, 50)
+owlhub.BorderSizePixel = 5
+owlhub.Position = UDim2.new(0.510998309, 0, 0.343774796, 0)
+owlhub.Size = UDim2.new(0, 131, 0, 50)
+owlhub.Font = Enum.Font.Gotham
+owlhub.Text = "Owl Hub"
+owlhub.TextColor3 = Color3.fromRGB(255, 255, 255)
+owlhub.TextSize = 20.000
+
+reviz.Name = "reviz"
+reviz.Parent = scripts
+reviz.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+reviz.BorderColor3 = Color3.fromRGB(50, 50, 50)
+reviz.BorderSizePixel = 5
+reviz.Position = UDim2.new(0.756345212, 0, 0.343774796, 0)
+reviz.Size = UDim2.new(0, 131, 0, 50)
+reviz.Font = Enum.Font.Gotham
+reviz.Text = "Reviz Admin"
+reviz.TextColor3 = Color3.fromRGB(255, 255, 255)
+reviz.TextSize = 20.000
+
+games.Name = "games"
+games.Parent = hostframe
+games.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+games.BorderColor3 = Color3.fromRGB(50, 50, 50)
+games.BorderSizePixel = 5
+games.Position = UDim2.new(0.0913173631, 0, 0.172280356, 0)
+games.Size = UDim2.new(0, 591, 0, 345)
+games.Visible = false
+
+scriptslabel_2.Name = "scriptslabel"
+scriptslabel_2.Parent = games
+scriptslabel_2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+scriptslabel_2.BorderColor3 = Color3.fromRGB(50, 50, 50)
+scriptslabel_2.BorderSizePixel = 5
+scriptslabel_2.Position = UDim2.new(0.338409483, 0, -0.000299868378, 0)
+scriptslabel_2.Size = UDim2.new(0, 167, 0, 34)
+scriptslabel_2.Font = Enum.Font.GothamBlack
+scriptslabel_2.Text = "Pika Hub - Games"
+scriptslabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+scriptslabel_2.TextSize = 20.000
+scriptslabel_2.TextWrapped = true
+
+arsenal.Name = "arsenal"
+arsenal.Parent = games
+arsenal.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+arsenal.BorderColor3 = Color3.fromRGB(50, 50, 50)
+arsenal.BorderSizePixel = 5
+arsenal.Position = UDim2.new(0.143824041, 0, 0.337977707, 0)
+arsenal.Size = UDim2.new(0, 131, 0, 50)
+arsenal.Font = Enum.Font.Gotham
+arsenal.Text = "Arsenal"
+arsenal.TextColor3 = Color3.fromRGB(255, 255, 255)
+arsenal.TextSize = 20.000
+
+ninjalegends.Name = "ninjalegends"
+ninjalegends.Parent = games
+ninjalegends.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+ninjalegends.BorderColor3 = Color3.fromRGB(50, 50, 50)
+ninjalegends.BorderSizePixel = 5
+ninjalegends.Position = UDim2.new(0.389170915, 0, 0.337977707, 0)
+ninjalegends.Size = UDim2.new(0, 131, 0, 50)
+ninjalegends.Font = Enum.Font.Gotham
+ninjalegends.Text = "Ninja Legends"
+ninjalegends.TextColor3 = Color3.fromRGB(255, 255, 255)
+ninjalegends.TextSize = 20.000
+
+cbro.Name = "cbro"
+cbro.Parent = games
+cbro.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+cbro.BorderColor3 = Color3.fromRGB(50, 50, 50)
+cbro.BorderSizePixel = 5
+cbro.Position = UDim2.new(0.634517789, 0, 0.337977707, 0)
+cbro.Size = UDim2.new(0, 131, 0, 50)
+cbro.Font = Enum.Font.Gotham
+cbro.Text = "CB:RO"
+cbro.TextColor3 = Color3.fromRGB(255, 255, 255)
+cbro.TextSize = 20.000
+
+homebtn.Name = "homebtn"
+homebtn.Parent = hostframe
+homebtn.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+homebtn.BorderColor3 = Color3.fromRGB(50, 50, 50)
+homebtn.BorderSizePixel = 5
+homebtn.Position = UDim2.new(0.390718549, 0, 0.0344827585, 0)
+homebtn.Size = UDim2.new(0, 123, 0, 44)
+homebtn.Font = Enum.Font.GothamBlack
+homebtn.Text = "Home"
+homebtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+homebtn.TextSize = 20.000
+homebtn.TextWrapped = true
+
+scriptsbtn.Name = "scriptsbtn"
+scriptsbtn.Parent = hostframe
+scriptsbtn.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+scriptsbtn.BorderColor3 = Color3.fromRGB(50, 50, 50)
+scriptsbtn.BorderSizePixel = 5
+scriptsbtn.Position = UDim2.new(0.592814326, 0, 0.0344827585, 0)
+scriptsbtn.Size = UDim2.new(0, 123, 0, 44)
+scriptsbtn.Font = Enum.Font.GothamBlack
+scriptsbtn.Text = "Scripts"
+scriptsbtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+scriptsbtn.TextSize = 20.000
+scriptsbtn.TextWrapped = true
+
+gamesbtn.Name = "gamesbtn"
+gamesbtn.Parent = hostframe
+gamesbtn.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+gamesbtn.BorderColor3 = Color3.fromRGB(50, 50, 50)
+gamesbtn.BorderSizePixel = 5
+gamesbtn.Position = UDim2.new(0.794910192, 0, 0.0344827585, 0)
+gamesbtn.Size = UDim2.new(0, 121, 0, 44)
+gamesbtn.Font = Enum.Font.GothamBlack
+gamesbtn.Text = "Games"
+gamesbtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+gamesbtn.TextSize = 20.000
+gamesbtn.TextWrapped = true
+
+-- Scripts--
+
+local function WERWD_fake_script() -- hostframe.UI 
+	local script = Instance.new('LocalScript', hostframe)
+
+	--variables--
+	local hf = script.Parent
+	local hb = script.Parent.homebtn
+	local sb = script.Parent.scriptsbtn
+	local gb = script.Parent.gamesbtn
+	local hf = script.Parent.home
+	local sf = script.Parent.scripts
+	local gf = script.Parent.games
+	--ui function--
+	hb.MouseButton1Click:Connect(function() -- Switches to home
+		hf.Visible = true
+		sf.Visible = false
+		gf.Visible = false
+		print("Plr Switched To Home")
+	end)
+	
+	sb.MouseButton1Click:Connect(function() -- Switched to scripts
+		hf.Visible = false
+		sf.Visible = true
+		gf.Visible = false
+		print("Plr Switched To Scripts")
+	end)
+	
+	gb.MouseButton1Click:Connect(function() -- Switches to games
+		hf.Visible = false
+		sf.Visible = false
+		gf.Visible = true
+		print("Plr Switched To Games")
+	end)
+	
+	function onKeyPress(inputObject, gameProcessedEvent)
+	if inputObject.KeyCode == Enum.KeyCode.Equals then
+	if hf.Visible == false then
+	hf.Visible = true
+	else
+	hf.Visible = false
+	end
+	end
+	end
+	
+	game:GetService("UserInputService").InputBegan:connect(onKeyPress)
+end
+coroutine.wrap(WERWD_fake_script)()
+local function HHWEF_fake_script() -- scripts.scriptf 
+	local script = Instance.new('LocalScript', scripts)
+
+	--variables--
+	local fluff = script.Parent.fluffyhub
+	local kfling = script.Parent.fling
+	local owl = script.Parent.owlhub
+	local reviz = script.Parent.reviz
+	--script function--
+	fluff.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/flufl/bignukes/master/FluffyHub.txt",true))()
+		print("Plr has ran FluffyHub.")
+	end)
+	
+	kfling.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/rPLeYXqj", true))()
+		print("Plr has ran Kill Fling Gui.")
+	end)
+	
+	owl.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+		print("Plr has ran Owl Hub.")
+	end)
+	
+	reviz.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/ibFPdiF7", true))()
+		print("Plr has ran Reviz Admin.")
+	end)
+end
+coroutine.wrap(HHWEF_fake_script)()
+local function AZFCLZG_fake_script() -- games.gamesf 
+	local script = Instance.new('LocalScript', games)
+
+	--variables--
+	local arsenal = script.Parent.arsenal
+	local ninjaman = script.Parent.ninjalegends
+	local cbro = script.Parent.cbro
+	--gamesfunction--
+	arsenal.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/4CSP8pYW", true))()
+	end)
+	
+	ninjaman.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/AhmWzPPA", true))()
+	end)
+	
+	cbro.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/3uBCGCV5", true))()
+	end)
+end
+coroutine.wrap(AZFCLZG_fake_script)()
